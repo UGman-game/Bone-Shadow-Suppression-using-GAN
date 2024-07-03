@@ -2,8 +2,8 @@
 
 This project leverages Generative Adversarial Networks (GANs) to address the challenge of bone shadow suppression in medical images. The goal is to enhance the clarity of medical images by reducing bone shadows, which can obscure important details.
 
-##Approach
-Data Preprocessing:
+## Approach
+- Data Preprocessing:
 
 Image Loading: Load source (input) and target (ground truth) images from a dataset stored in Google Drive.
 Image Resizing: Resize images to a fixed size (120x120 pixels) for uniformity.
