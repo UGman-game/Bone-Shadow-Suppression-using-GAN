@@ -19,34 +19,43 @@ This project leverages Generative Adversarial Networks (GANs) to address the cha
 **Training:**
 
 + Loss Functions: Binary cross-entropy loss for both generator and discriminator.
-Optimization: Adam optimizer with a learning rate of 0.001.
-Batch Processing: Used multiprocessing for efficient batch processing of images.
-Epochs: Trained the model for 50 epochs with a batch size of 4.
-Evaluation:
++ Optimization: Adam optimizer with a learning rate of 0.001.
++ Batch Processing: Used multiprocessing for efficient batch processing of images.
++ Epochs: Trained the model for 50 epochs with a batch size of 4.
+
+**Evaluation:**
 
 Visualization: Displayed target and generated images during training to visually assess the model's performance.
 Discriminator Predictions: Evaluated the quality of generated images using the discriminator's predictions.
-Saving and Loading Models:
+
+**Saving and Loading Models:**
 
 Saved the generator model architecture and weights to disk.
 Provided functionality to load the saved model for future use.
-Testing:
+
+**Testing:**
 
 Preprocessed test images from a local directory.
 Generated bone shadow-suppressed images using the trained generator.
 Passed the generated images through the discriminator to classify them as "Shadow Suppression Detected" or "No Shadow Suppression Detected".
-Results
-Successfully trained a GAN to perform bone shadow suppression on medical images.
-Achieved significant reduction in bone shadows, improving the visibility of critical details in medical images.
-Usage
-Training:
 
-Prepare a dataset with source and target images.
-Run the training script to train the GAN.
-Monitor the training process through loss plots and generated images.
-Testing:
+## Results
 
-Use the provided script to preprocess test images.
-Generate bone shadow-suppressed images using the trained generator.
-Classify the generated images using the discriminator.
++ Successfully trained a GAN to perform bone shadow suppression on medical images.
++ Achieved significant reduction in bone shadows, improving the visibility of critical details in medical images.
+
+## Usage
+
+**Training:**
+
++ Prepare a dataset with source and target images.
++ Run the training script to train the GAN.
++ Monitor the training process through loss plots and generated images.
+
+**Testing:**
+
++ Use the provided script to preprocess test images.
++ Generate bone shadow-suppressed images using the trained generator.
++ Classify the generated images using the discriminator.
+
 This project demonstrates the application of GANs in medical image processing, specifically targeting the enhancement of image quality by suppressing bone shadows.
