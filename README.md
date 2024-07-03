@@ -3,19 +3,22 @@
 This project leverages Generative Adversarial Networks (GANs) to address the challenge of bone shadow suppression in medical images. The goal is to enhance the clarity of medical images by reducing bone shadows, which can obscure important details.
 
 ## Approach
-**- Data Preprocessing:**
 
-Image Loading: Load source (input) and target (ground truth) images from a dataset stored in Google Drive.
-Image Resizing: Resize images to a fixed size (120x120 pixels) for uniformity.
-Normalization: Normalize pixel values to the range [0, 1].
-Model Architecture:
+**Data Preprocessing:**
 
-Generator: A convolutional neural network (CNN) that generates bone shadow-suppressed images from input images.
-Discriminator: A CNN that distinguishes between real (ground truth) images and generated images.
-GAN: Combines the generator and discriminator to form the complete GAN, which is trained end-to-end.
-Training:
++ Image Loading: Load source (input) and target (ground truth) images from a dataset stored in Google Drive.
++ Image Resizing: Resize images to a fixed size (120x120 pixels) for uniformity.
++ Normalization: Normalize pixel values to the range [0, 1].
 
-Loss Functions: Binary cross-entropy loss for both generator and discriminator.
+**Model Architecture:**
+
++ Generator: A convolutional neural network (CNN) that generates bone shadow-suppressed images from input images.
++ Discriminator: A CNN that distinguishes between real (ground truth) images and generated images.
++ GAN: Combines the generator and discriminator to form the complete GAN, which is trained end-to-end.
+
+**Training:**
+
++ Loss Functions: Binary cross-entropy loss for both generator and discriminator.
 Optimization: Adam optimizer with a learning rate of 0.001.
 Batch Processing: Used multiprocessing for efficient batch processing of images.
 Epochs: Trained the model for 50 epochs with a batch size of 4.
